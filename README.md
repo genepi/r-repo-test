@@ -1,2 +1,2 @@
-# r-repo-test
-A R test repo!
+# R Test Repo
+A R test repo for teaching. 
