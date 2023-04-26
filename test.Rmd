@@ -1,7 +1,35 @@
-library(ggplot2)
-library(here)
-install.packages("here")
-df <- read.delim(here("data", "food.csv"))
-p <- ggplot(df, aes(x, y)) + geom_point()
-ggsave(here("figs", "foofy_scatterplot.png"))
+---
+title: "R Testrepo"
+date: "`r Sys.Date()`"
+output:
+  rmdformats::robobook:
+    self_contained: true
+    thumbnails: false
+    lightbox: true
+    gallery: false
+    highlight: tango
+author: Sebastian Schönherr
+---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(ggplot2)
+```
+
+This repo has been created for teaching. 
+
+## Plot 1 
+This is a simple ggplot. 
+```{r}
+df <- read.csv("data/food.csv",sep=',')
+p <- ggplot(df, aes(Data.Beta.Cryptoxanthin, Data.Cholesterol)) + geom_point()
+p
+```
+
+## Plot 2 
+This is a second simple ggplot. 
+```{r}
+df <- read.csv("data/food.csv",sep=',')
+p <- ggplot(df, aes(Data.Niacin, Data.Vitamins.Vitamin.B12)) + geom_point()
+p
+```
